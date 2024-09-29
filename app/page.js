@@ -21,10 +21,11 @@ export default function Home() {
                 Start Reviewing
               </button>
               </Link>
-              
-              <button className="bg-yellow-500 text-white py-2 px-6 rounded-lg">
-                Read Reviews
-              </button>
+              <Link href={`/reviews`} >
+                <button className="bg-yellow-500 text-white py-2 px-6 rounded-lg">
+                  Read Reviews
+                </button>
+              </Link>
             </div>
           </div>
         </section>

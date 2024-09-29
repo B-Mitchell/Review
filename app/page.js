@@ -117,7 +117,7 @@ export default function Home() {
               <div className="bg-white shadow-lg rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-800">Great Service!</h3>
                 <p className="mt-2 text-gray-600">
-                  "Amazing product! The delivery was fast and the quality exceeded my expectations."
+                {'"'}Amazing product! The delivery was fast and the quality exceeded my expectations.{'"'}
                 </p>
                 <div className="mt-4">
                   <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span>

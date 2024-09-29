@@ -1,5 +1,4 @@
 import './globals.css'
-import { Providers } from './globalRedux/Provider'
 import Navbar from './components/Navbar'
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
@@ -13,12 +12,10 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body>
-          <Providers>
             <Navbar />
             <div className="user-container">
               {children}
             </div>
-          </Providers>
         </body>
       </html>
     </ClerkProvider>

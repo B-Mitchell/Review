@@ -1,113 +1,151 @@
-import Image from 'next/image'
+'use client'
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <main className="bg-white">
+        {/* Hero Section */}
+        <section className="hero bg-gradient-to-r from-white to-blue-200 py-20 text-center">
+          <div className="container mx-auto px-6">
+            <h1 className="text-5xl font-bold text-gray-800">
+              Your Trusted Platform for Honest Reviews
+            </h1>
+            <p className="mt-4 text-xl text-gray-600">
+              Join our community and share your experiences with the world.
+            </p>
+            <div className="mt-8">
+              <Link href={`/categories`} >
+                <button className="bg-green-500 text-white py-2 px-6 rounded-lg mr-4">
+                Start Reviewing
+              </button>
+              </Link>
+              
+              <button className="bg-yellow-500 text-white py-2 px-6 rounded-lg">
+                Read Reviews
+              </button>
+            </div>
+          </div>
+        </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        {/* Features Section */}
+        <section className="features py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-semibold text-center text-gray-800">Features</h2>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+              <div className="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-3 3m0 0l-3-3m3 3V10a6 6 0 0112 0v7m-6-8a4 4 0 00-4 4v1" />
+                </svg>
+                <h3 className="text-xl font-bold mt-4 text-gray-800">Write Detailed Reviews</h3>
+                <p className="mt-2 text-gray-600">
+                  Share your honest experiences and help others make informed decisions.
+                </p>
+              </div>
+              <div className="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+                <h3 className="text-xl font-bold mt-4 text-gray-800">Browse Honest Reviews</h3>
+                <p className="mt-2 text-gray-600">Explore thousands of real reviews on products and services.</p>
+              </div>
+              <div className="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 9l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+                <h3 className="text-xl font-bold mt-4 text-gray-800">Rate Products & Services</h3>
+                <p className="mt-2 text-gray-600">Use our rating system to evaluate your favorite products.</p>
+              </div>
+              <div className="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                </svg>
+                <h3 className="text-xl font-bold mt-4 text-gray-800">Join the Community</h3>
+                <p className="mt-2 text-gray-600">Connect with like-minded users to share and discover reviews.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        {/* How It Works Section */}
+        <section className="how-it-works py-20 bg-white">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-semibold text-center text-gray-800">How It Works</h2>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+              <div className="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 11c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4zM12 15v7m0 0H7m5 0h5" />
+                </svg>
+                <h3 className="text-xl font-bold mt-4 text-gray-800">Sign Up</h3>
+                <p className="mt-2 text-gray-600">Create an account to start reviewing or browsing reviews.</p>
+              </div>
+              <div className="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7l3 3 4-4m4 4l2 2 5-5" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h1v7H3v-7h11zM5 17h6" />
+                </svg>
+                <h3 className="text-xl font-bold mt-4 text-gray-800">Browse Products</h3>
+                <p className="mt-2 text-gray-600">Find products or services that interest you.</p>
+              </div>
+              <div className="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 11v4M16 11v4M12 7v4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 19h12M6 17h12" />
+                </svg>
+                <h3 className="text-xl font-bold mt-4 text-gray-800">Write a Review</h3>
+                <p className="mt-2 text-gray-600">Share your thoughts and experiences to help others.</p>
+              </div>
+              <div className="text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 17l4 4 4-4" />
+                </svg>
+                <h3 className="text-xl font-bold mt-4 text-gray-800">Engage & Rate</h3>
+                <p className="mt-2 text-gray-600">Rate and interact with reviews to help others.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+        {/* Popular Reviews Section */}
+        <section className="popular-reviews py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-semibold text-center text-gray-800">Popular Reviews</h2>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {/* Review Card */}
+              <div className="bg-white shadow-lg rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-800">Great Service!</h3>
+                <p className="mt-2 text-gray-600">
+                  "Amazing product! The delivery was fast and the quality exceeded my expectations."
+                </p>
+                <div className="mt-4">
+                  <span className="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                </div>
+              </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+              {/* Add more review cards as needed */}
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action Section */}
+        <section className="cta py-20 bg-green-500 text-white text-center">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-semibold">Ready to Share Your Thoughts?</h2>
+            <p className="mt-4 text-xl">
+              Join our community and help others make informed decisions with your reviews.
+            </p>
+            <div className="mt-8">
+            <Link href={`/categories`} >
+                <button className="bg-white text-green-500 py-2 px-6 rounded-lg">
+                Get started
+              </button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
 }
